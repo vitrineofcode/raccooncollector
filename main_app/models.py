@@ -25,7 +25,9 @@ class Raccoon(models.Model):
   age = models.IntegerField()
   description = models.TextField(max_length=250)
   exercises = models.ManyToManyField(Exercise)
-  user = models.ForeignKey(User, on_delete=models.CASCADE)
+  # user = models.ForeignKey(User, on_delete=models.CASCADE)
+  user = models.ForeignKey(User, on_delete=models.CASCADE, default='')
+
 
 
   def __str__(self):
